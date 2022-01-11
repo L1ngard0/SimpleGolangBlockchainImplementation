@@ -9,6 +9,10 @@ import (
 type Listener net.Listener
 type Conn net.Conn
 
+func Test() {
+	print("test")
+}
+
 func Listen(address string, handle func(Conn, *Package)) Listener {
 	splited := strings.Split(address, ":")
 	if len(splited) != 2 {
